@@ -11,8 +11,7 @@ from aciso.metric import get_metrics_list, put_metrics, MetricList, get_metric, 
 
 class Api:
     def __init__(self, api_key: str):
-        # self.api_url = 'https://api.augmentedciso.com/api/public/'
-        self.api_url = 'http://localhost:5481/api/public/'
+        self.api_url = 'https://api.augmentedciso.com/api/public/'
         self.api_key = api_key
 
     def get_access_url(self, endpoint: str):
@@ -26,6 +25,10 @@ class Api:
             if response['ok']:
                 response.pop('ok', None)
                 return response
+            else:
+                raise Exception("Invalid API_KEY")
+        else:
+            raise Exception("Invalid API_KEY")
         return None
 
     def get_metrics_list(self):
