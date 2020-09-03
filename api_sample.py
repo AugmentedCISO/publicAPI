@@ -1,6 +1,7 @@
 ##############################################################
 # Project : AugmentedCISO Public API
 # Author : EXCUBE (contact@excube.fr)
+# This is a sample of how to use the AugmentedCISO API with Python directly
 ##############################################################
 import json
 
