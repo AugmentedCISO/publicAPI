@@ -1,18 +1,18 @@
+##############################################################
+# Project : AugmentedCISO Public API
+# Author : EXCUBE (contact@excube.fr)
+##############################################################
+
 import requests
+
 from aciso.metric import get_metrics_list, put_metrics, MetricList, get_metric, Metric, put_one_metric, \
     delete_one_metric
 
 
 class Api:
-    def __init__(self, api_key: str, is_dev=False):
-        self.url_prod = ''
-        self.url_dev = 'http://localhost:5481/api/public/'
-
-        self.api_url = self.url_prod
-        if is_dev:
-            self.api_url = self.url_dev
-
-        self.is_dev = is_dev
+    def __init__(self, api_key: str):
+        # self.api_url = 'https://api.augmentedciso.com/api/public/'
+        self.api_url = 'http://localhost:5481/api/public/'
         self.api_key = api_key
 
     def get_access_url(self, endpoint: str):
@@ -40,7 +40,7 @@ class Api:
     def put_metrics(self, metric_list: MetricList):
         return put_metrics(self.get_access_url('metrics'), metric_list)
 
-    def put_metrics_perimeter(self, metric_list: MetricList, perimeter:str):
+    def put_metrics_perimeter(self, metric_list: MetricList, perimeter: str):
         return put_metrics(self.get_access_url('metrics/%s' % perimeter), metric_list)
 
     def put_one_metric(self, metric: Metric):

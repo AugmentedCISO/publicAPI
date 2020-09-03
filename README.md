@@ -1,2 +1,3 @@
-# publicAPI
-AugmentedCISO public API libs and samples
+# public AugmentedCISO API
+
+AugmentedCISO public API Python lib and samples

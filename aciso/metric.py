@@ -1,3 +1,8 @@
+##############################################################
+# Project : AugmentedCISO Public API
+# Author : EXCUBE (contact@excube.fr)
+##############################################################
+
 import json
 
 import requests
@@ -15,6 +20,9 @@ class Metric:
             "metric_id": self.metric,
             "value": self.value,
         }
+
+    def __str__(self):
+        return 'METRIC %s / PERIMETER %s / VALUE %s' % (str(self.metric), str(self.perimeter), str(self.value))
 
 
 class MetricList:
@@ -40,6 +48,12 @@ class MetricList:
         for metric in self.collection:
             data["metrics"].append(metric.data())
         return data
+
+    def __str__(self):
+        s = ''
+        for m in self.collection:
+            s += ' - ' + str(m) + '\n'
+        return s
 
 
 def get_metrics_list(url: str):
