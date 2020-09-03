@@ -2,6 +2,7 @@
 # Project : AugmentedCISO Public API
 # Author : EXCUBE (contact@excube.fr)
 # This is a sample of how to use the AugmentedCISO API with the python library
+# Full API documentation: https://api.augmentedciso.com/api/public/doc
 ##############################################################
 
 from aciso import AugmentedCISOApi
