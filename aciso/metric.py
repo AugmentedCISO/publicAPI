@@ -73,7 +73,6 @@ def get_metrics_list(url: str):
 def get_metric(url: str):
     r = requests.get(url)
     if r.status_code is 200:
-        metric_list = MetricList()
         response = r.json()
         if response['ok']:
             response.pop('ok', None)
