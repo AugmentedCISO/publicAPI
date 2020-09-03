@@ -6,4 +6,4 @@ AugmentedCISO public API Python lib and samples
 
 This repository contains two ways of exploring the AugmentedCISO API:
  - using the provided library (lib_sample.py)
- - using only the `requests` python module to execute API calls 
+ - using only the `requests` python module to execute API calls (api_sample.py) 
