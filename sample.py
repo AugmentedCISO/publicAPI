@@ -7,7 +7,7 @@ from aciso import AugmentedCISOApi
 from aciso.metric import Metric, MetricList
 
 # Change these to match your needs
-API_KEY = 'Z7VN7dDyHmb9DJUgP5-bJvuaZoBux64crP9tPzdbptDJ4fmZ5RzqXUJBi_7prAWB'
+API_KEY = 'YOU_API_KEY'
 
 # WARNING: this sample will change the current value of the specified metric!
 
